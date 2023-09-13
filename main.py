@@ -7,7 +7,7 @@ login_xy = (1080, 360)
 first_button_xy = (1640, 350)
 button_count = 7
 button_color = (51, 122, 183)
-clicked_color = (40, 96, 144)
+hovered_color = (40, 96, 144)
 stop_x_limit = 400
 
 # get coordinates
@@ -22,7 +22,7 @@ while True:
         pyautogui.click(*bookmark_xy)
         while True:
             im = pyautogui.screenshot()
-            if im.getpixel(bookmark_xy) != (40, 96, 144):
+            if im.getpixel(bookmark_xy) != hovered_color:
                 break
         print('login')
     else:    
